@@ -20,6 +20,7 @@ require_once 'kod.php';
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="js/jquery-3.1.1.min.js"></script>
+    <link rel="Stylesheet" href="lightbox/css/lightbox.min.css">
     <title></title>
     
     <style>
@@ -29,9 +30,10 @@ require_once 'kod.php';
     }
     .startInfo{
         
-        /*text-align: center;*/
+        text-align: center;
         margin: 10px auto;
-        width: 200px;
+        width: 300px;
+        padding: 10px 0;
     }
     
 </style>
@@ -53,8 +55,8 @@ require_once 'kod.php';
                     </div>
                 </div>
 
-                            <div class="startInfo">fgffgfgfgfgfgfgfgfgfgfgfgfgfgf</div>
-                <form action="" class="form-inline" method="post">
+                            <div class="startInfo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, illum. </div>
+                            <form action="secondPage.php" class="form-inline" method="post">
 
                 <div id="form" class="col-sm-offset-2 col-xs-8 col-xs-offset-2 col-sm-8 col-md-8 col-sm-offset-2">
                     <div class="form-group">
@@ -70,12 +72,26 @@ require_once 'kod.php';
                     </div>
                 </div>
     </form>
-                <div class="startInfo">fgffgfgfgfgfgfgfgfgfgfgfgfgfgf</div>
-                <div class="startInfo">galeria</div>
+                <div class="startInfo">Cupiditate dolores, ad commodi alias accusantium reprehenderit, minima ab voluptates odit dignissimos at.</div>
+                <!--<div class="startInfo">galeria</div>-->
+                <table align="center" border="0">
+  <tr> <td><a href="img/1.jpg" data-lightbox="warszawa" title="Warszawa1">
+  <img src="img/1_min.jpg" /></a></td> <td><a href="img/2.jpg" data-lightbox="warszawa"><img src="img/2_min.jpg" /></a></td> <td><a href="img/3.jpg" data-lightbox="warszawa"><img src="img/3_min.jpg" /></a></td> </tr>
+  <tr> <td><a href="img/4.jpg" data-lightbox="warszawa"><img src="img/4_min.jpg" /></a></td> <td><a href="img/5.jpg" data-lightbox="warszawa"><img src="img/5_min.jpg" /></a></td> <td><a href="img/6.jpg" data-lightbox="warszawa"><img src="img/6_min.jpg" /></a></td> </tr>
+  <tr> <td><a href="img/7.jpg" data-lightbox="warszawa"><img src="img/7_min.jpg" /></a></td> <td><a href="img/8.jpg" data-lightbox="warszawa"><img src="img/8_min.jpg" /></a></td> <td><a href="img/9.jpg" data-lightbox="warszawa"><img src="img/9_min.jpg" /></a></td> </tr>
+  </table>
+ 
+ 
+  <script src="lightbox/js/lightbox-plus-jquery.min.js"></script>  
                 
                 
                 
-                <div class="startInfo">fgffgfgfgfgfgfgfgfgfgfgfgfgfgf</div>
+                <div class="startInfo">Cupiditate dolores, ad commodi alias accusantium reprehenderit, minima ab voluptates odit dignissimos at.</div>
+                
+                <div class="startInfo">
+                <a href="#" text-align="center">Regulamin</a>
+                <a href="#" text-align="center">Contact</a>
+                </div>
             </div>
 
         </div>

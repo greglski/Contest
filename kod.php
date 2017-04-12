@@ -13,10 +13,21 @@ if(isset($_POST['submit'])){
             $birth_date = $_POST['day'].'-'.$_POST['month'].'-'.$_POST['year'];
             $sex = $_POST['sex'];
             $email = $_POST['email'];
-            $phone = $_POST['cphone'].$_POST['yphone'];
-            $address = $_POST['address'];
+            $yourphone = $_POST['yourphone'];
+            $phone = $_POST['cphone'].$_POST['yourphone'];
+            $street = $_POST['street'];
+            $building_number = $_POST['building_number'];
+            $flat_number = $_POST['flat_number'];
+            $post_code = $_POST['post_code'];
+            $city_name= $_POST['city_name'];
+            $country_name = $_POST['country_name'];
+            
+              
             $first_question = $_POST['first_question'];
             $second_question = $_POST['second_question'];
+            $third_question = $_POST['third_question'];
+            $fourth_question = $_POST['fourth_question'];
+            $good_answers = '';
 //            $yphone = $_POST['yphone'];
             $year = $_POST['year'];
             $month = $_POST['month'];
@@ -35,12 +46,21 @@ $walidacja->puste($month, 'month');
 $walidacja->puste($day, 'day');
 $walidacja->puste($sex, 'sex');
 $walidacja->puste($email, 'email');
-$walidacja->puste($phone, 'phone');
-$walidacja->puste($address, 'address');
+$walidacja->puste($yourphone, 'yourphone');
+$walidacja->puste($street, 'street');
+$walidacja->puste($building_number, 'building_number');
+
+$walidacja->puste($post_code, 'post_code');
+$walidacja->puste($city_name, 'city_name');
+$walidacja->puste($country_name, 'country_name');
 $walidacja->maxIloscZnakow($name, 'name', 25);
 $walidacja->maxIloscZnakow($surname, 'surname', 40);
-$walidacja->maxIloscZnakow($phone, 'phone', 16);
-$walidacja->minIloscZnakow($phone, 'phone', 9);
+
+$walidacja->maxIloscZnakow($street, 'street', 40);
+$walidacja->maxIloscZnakow($city_name, 'city_name', 40);
+$walidacja->maxIloscZnakow($country_name, 'country_name', 35);
+//$walidacja->minIloscZnakow($yourphone, 'yourphone', 9);
+
 $walidacja->weryfikacjaMaila($email, 'email');
 
 if(!empty($name)){
@@ -50,13 +70,14 @@ if (!empty($surname)){
         $walidacja->znakiOK($surname, 'surname');
 }
 
-if (!empty($phone)){
-        $walidacja->minIloscZnakow($phone, 'phone');
-}
+//if (!empty($yourphone)){
+//        $walidacja->minIloscZnakow($yourphone, 'yourphone');
+//}
+//if (!empty($yourphone)){
+//        $walidacja->kodOK($yourphone, 'yourphone');
+//}
 
-
-//$walidacja->weryfikacjaHasla($haslo, 'Hasło');
-//$walidacja->porownaj($haslo, 'Hasło', $haslo2, 'Hasło2');
+//s
 
 if(!isset($_POST['agreement'])){
 //    
@@ -64,9 +85,11 @@ if(!isset($_POST['agreement'])){
 }
 
 if($walidacja->liczError == 0){
-    $now = date('Y-m-d');   
+    
+    
+    $date = date('Y-m-d');   
     $addDane = new Dane();
-    $addDane->addDane(NULL,$name, $surname, $birth_date, $sex, $email, $phone, $address, $first_question, $second_question, $date);
+    $addDane->addDane(NULL,$name,$surname,$birth_date,$sex,$email,$phone,$street,$building_number,$flat_number,$post_code,$city_name,$country_name,$first_question,$second_question,$third_question,$fourth_question,$good_answers,$date);
     
 //    $checkID = $addDane->checkId;
     

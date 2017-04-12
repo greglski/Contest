@@ -166,20 +166,19 @@ require_once 'kod.php';
                         </div>
                     </div>
 
-                    <div class="form-group row">
+<div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Sex</label>
-                        <div class="text-center">
-                            <input class="col-2" class="radio" class="form-control" type="radio" value="male" id="sex" name="sex" checked> Male
-                            <input class="col-2" class="pull-right" class="radio" class="form-control" type="radio" value="male" id="sex" name="sex"> Female
-                        </div>
+                          <select class="form-control" id="sex" name="sex"  class="input-xlarge" chacked="checked">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option> </select>
                     </div>
 
                     <div class="form-group row">
                         <label for="example-email-input" class="col-2 col-form-label">Your email</label>
                         <div class="col-10">
                             <input class="form-control" type="email" value="" id="email" name="email">
-                        </div>
-                    </div>
+                        
+                        </div></div>
                     
 
     
@@ -187,40 +186,80 @@ require_once 'kod.php';
                     <label for="example-tel-input" class="col-1 col-form-label">Telephone</label>    
                         <label for="example-tel-input" class="col-2 col-form-label"></label>
                           <select class="form-control" id="cphone" name="cphone" class="input-xlarge">
-                            <option value="" selected="selected">+</option>
-                            <option value="+44">+44</option>
+                            <option value="" selected="selected">Country number</option>
+                            <option value="+48">+48</option>
                             <option value="+46">+46</option>
                             <option value="+47">+47</option>
                             <option value="+49">+49</option>
                             <option value="+43">+43</option>
                         </select>
-                    <input class="form-control" type="tel" value="" id="yphone" name="yphone">
+                        Phone number:
+                    <input class="form-control" type="tel" value="" id="yourphone" name="yourphone">
                 </div>
                     
                     
 
 
                     <div class="form-group row">
-                        <label for="example-tel-input" class="col-2 col-form-label">Adres line</label>
+                        <label for="example-tel-input" class="col-2 col-form-label">Address:<br><br> Street or place name:</label>
                         <div class="col-10">
-                            <input class="form-control" type="text" value="" id="address" name="address">
+                            <input class="form-control" type="text" value="" id="street" name="street">
+
+                        </div>
+                    </div>
+
+ <div class="form-group row">
+                        <label for="example-tel-input" class="col-2 col-form-label">Building number:</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text" value="" id="building_number" name="building_number">
+
+                        </div>
+                    </div>
+
+<div class="form-group row">
+                        <label for="example-tel-input" class="col-2 col-form-label">Flat number:</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text" value="" id="flat_number" name="flat_number">
+
+                        </div>
+                    </div>
+<div class="form-group row">
+                        <label for="example-tel-input" class="col-2 col-form-label">Post code:</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text" value="" id="post_code" name="post_code">
+
+                        </div>
+                    </div>
+<div class="form-group row">
+                        <label for="example-tel-input" class="col-2 col-form-label">City name:</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text" value="" id="city_name" name="city_name">
+
+                        </div>
+                    </div>
+<div class="form-group row">
+                        <label for="example-tel-input" class="col-2 col-form-label">Country name:</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text" value="" id="country_name" name="country_name">
 
                         </div>
                     </div>
 
 
+
+
                     
-<div class="form-group row" class="Question">
+<div class="form-group row" class="Question"id="first_question">
  <label for="example-tel-input" class="col-2 col-form-label">Which answer
  is correct. How many people do live in Warsaw?</label>
  <div class="col-10">
-   <select class="form-control"  id="first_question" name="first_question"
+   <select class="form-control"   id="first_question" name="first_question"
    class="input-xlarge">
                            <option value="0" selected="selected">Question
                            1</option>
-                           <option value="0">931,321</option>
-                           <option value="1">1,748,916</option>
-                           <option value="0">2,432,098</option>
+                           <option value="931,321">931,321</option>
+                           <option value="1,748,916">1,748,916</option>
+                           <option value="2,432,098">2,432,098</option>
    </select>
  </div>
 </div>
@@ -234,44 +273,75 @@ require_once 'kod.php';
    class="input-xlarge">
                            <option value="0" selected="selected">Question
                            2</option>
-                           <option value="0">3</option>
-                           <option value="0">5</option>
-                           <option value="1">7</option>
-                           <option value="0">11</option>
+                           <option value="3">3</option>
+                           <option value="5">5</option>
+                           <option value="7">7</option>
+                           <option value="11">11</option>
    </select>
  </div>
 </div>
 
+<div class="form-group row" class="Question3" id="third_question">
+ <label for="example-tel-input" class="col-2 col-form-label">Which answer is correct. First president of Warsaw?</label>
+ <div class="col-10">
+   <select class="form-control"  id="third_question" name="third_question" class="input-xlarge">
+                           <option value="0" selected="selected">Question 3</option>
+                           <option value="Jarosław Kaczyński">Jarosław Kaczyński</option>
+                           <option value="Ignacy Wyssogota Zakrzewski">Ignacy Wyssogota Zakrzewski</option>
+                           <option value="Hanna Gronkiewicz Waltz">Hanna Gronkiewicz Waltz</option>
+   </select>
+ </div>
+</div>
+ 
 
+
+<div class="form-group row" class="Question4" id="fourth_question">
+ <label for="example-tel-input" class="col-2 col-form-label">Which answer is correct. Actual president of Warsaw?</label>
+ <div class="col-10">
+   <select class="form-control"  id="fourth_question" name="fourth_question" class="input-xlarge">
+                           <option value="0" selected="selected">Question 4</option>
+                           <option value="Jarosław Kaczyński">Jarosław Kaczyński</option>
+                           <option value="Ryszard Petru">Ryszard Petru</option>
+                           <option value="Hanna Gronkiewicz Waltz">Hanna Gronkiewicz Waltz</option>
+   </select>
+ </div>
+</div>
+                        
+<div class="form-group row">
+<label class="myCheckbox">
+    <input type="checkbox" name="agreement" id="agreement" >
+    <span>Agreement*</span>
+</label></div>
+<div>
+                    <p>*I agree...Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                </div>
 
                     <div class="form-group row">
                         <input type="submit" class="btn btn-info" name="submit" value="Submit Button">
                     </div>
                 </div>
+                </div>
             </div>
-
+    </form>
         </div>
-
+</div>
 
         <div id="kontakt" class="container-fluid">
             <div id="footer" class="row">
 
-<label class="myCheckbox">
-    <input type="checkbox" name="agreement" id="agreement" >
-    <span>Agreement:</span>
-</label>
 
 
 
 
-                <div>
-                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+
+                
+                <div id="contact">
+                    Contact: <br> Lorem ipsum 23 <br> 00-190 Warsaw <br>  
+                    
                 </div>
-
-                <div>
-                    Contact: <br> Lorem ipsum 23 <br> 00-190 Warsaw <br>
-                </div>
-
+                <div id="regulamin">
+ Contest Regulation...
+ </div>
                 <div>
                     © 2017
                 </div>
@@ -291,17 +361,33 @@ require_once 'kod.php';
 
 
 <script>
-    
 $(function() {
     $('#second_question').hide();
+    $('#third_question').hide();
+    $('#fourth_question').hide();
     $('#first_question').change(function() {
         if ($(this).is(":selected")) {
             $('#second_question').hide();
         } else {
             $('#second_question').show();
         }
-    });
-
+    })
+    
+    $('#second_question').change(function() {
+        if ($(this).is(":selected")) {
+            $('#third_question').hide();
+        } else {
+            $('#third_question').show();
+        }
+    })
+    $('#third_question').change(function() {
+        if ($(this).is(":selected")) {
+            $('#fourth_question').hide();
+        } else {
+            $('#fourth_question').show();
+        }
+    })
+    
 });
    </script>
 

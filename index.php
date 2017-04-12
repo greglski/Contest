@@ -48,7 +48,7 @@ require_once "{$page}.php";
                     <div class="row">
                         <div >
                             <h3>CONTEST ABOUT WARSAW <img src="img/wersja1_pol.png" alt=""></h3>
-                            <div id="error"><?php unset($walidacja); echo $wyslana;?></div>
+                            <div id="error">?php unset($walidacja); echo $wyslana;?></div>
                         </div>
                     </div>
                 </div>
