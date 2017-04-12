@@ -2,7 +2,7 @@
 
 require_once 'config/Config.php';
 
-
+require_once 'config/Switch.php';
 
 ?>
 
@@ -29,7 +29,15 @@ require_once 'kod.php';
         background-size: cover;
     }</style>
 
-<body>
+<?php
+
+require_once "{$page}.php";
+
+
+?>
+
+
+<!--<body>
 
     <form action="" method="post">
         <div id="reg" class="container" class="form-group row">
@@ -61,7 +69,7 @@ require_once 'kod.php';
                             <input class="form-control" type="search" value="" id="surname" name="surname">
                         </div>
                     </div>
-                    <!--
+                    
 
 <div class="form-group row">
   <label for="example-datetime-local-input" class="col-2 col-form-label">Date of birth</label>
@@ -69,7 +77,7 @@ require_once 'kod.php';
     <input class="form-control" type="date" value=""  id="birth">
   </div>
 </div>
--->
+
 
                     <div class="form-group row">
                         <label for="example-tel-input" class="col-2 col-form-label">Day of your birth</label>
@@ -300,11 +308,11 @@ $(function() {
         } else {
             $('#second_question').show();
         }
-    })
+    });
 
 });
    </script>
 
 </body>
 
-</html>
+</html>-->
