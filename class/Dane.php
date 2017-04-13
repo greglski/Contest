@@ -29,7 +29,10 @@ function addDane($id_user,$name,$surname,$birth_date,$sex,$email,$phone,$street,
      
      
      
-     
+//    function codeCheck($your_code){
+//        
+//        $codeQuery;
+//    }
  
  
  

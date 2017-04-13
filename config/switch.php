@@ -1,6 +1,22 @@
 <?php
 $page = 'firstPage';
 $title = 'Logowanie do aplikacji Kontakty';
+
+if(isset($_GET['your_code']) && !empty($_GET['your_code'])){
+    
+    
+   $your_code = (int)$_GET['your_code'];
+   
+   
+   
+   
+   
+   
+   
+//   echo $your_code;
+//   exit();
+}
+
   
 if(isset($_GET['page'])){
     

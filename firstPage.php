@@ -56,7 +56,7 @@ require_once 'kod.php';
                 </div>
 
                             <div class="startInfo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, illum. </div>
-                            <form action="secondPage.php" class="form-inline" method="post">
+                            <form action="" class="form-inline" method="get">
 
                 <div id="form" class="col-sm-offset-2 col-xs-8 col-xs-offset-2 col-sm-8 col-md-8 col-sm-offset-2">
                     <div class="form-group">
